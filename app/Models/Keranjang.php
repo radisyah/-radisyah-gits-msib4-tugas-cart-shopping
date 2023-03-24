@@ -11,10 +11,10 @@ class Keranjang extends Model
 
 	protected $table = 'keranjang';
 
-  protected $fillable = ['qty', 'subtotal', 'id_barang']; 
+  protected $fillable = ['qty', 'subtotal', 'id']; 
 
   public function products()
 	{
-		return $this->belongsTo(Product::class, 'id_barang');
+		return $this->belongsTo(Product::class, 'id');
 	}
 }
